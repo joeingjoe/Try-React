@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\public",
-    "\\src"
+    "\\src",
+    "\\src\\components"
   ],
-  "SelectedNode": "\\src\\index.css",
+  "SelectedNode": "\\src\\components\\Form.js",
   "PreviewInSolutionExplorer": false
 }

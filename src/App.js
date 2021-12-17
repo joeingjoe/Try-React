@@ -3,6 +3,10 @@ import FillterButton from "./components/FilterButton"
 import Form from "./components/Form"
 import Todo from "./components/Todo"
 
+function addTask(name) {
+    alert(name);
+}
+
 function App(props) {
 
     const taskList = props.tasks.map(task => (
@@ -16,7 +20,7 @@ function App(props) {
     return (
         <div className="todoapp stack-large">
             <h1>TodoMatic</h1>
-            <form />
+            <Form addTask={addTask} />
             <div className="filters btn-group stack-exception">
                 <FillterButton />
             </div>
