@@ -83,7 +83,14 @@ function App(props) {
     setTasks([...tasks, newTask])
     }
     const listHeadingRef = useRef(null);
-    const prevTaskLenght = usePrevious(task.lenght);
+    const prevTaskLength = usePrevious(tasks.length);
+
+    useEffect(() => {
+        if (tasks.length - prevTaskLength === -1) {
+            listHeadingRef.current.focus();
+        }
+    }, [tasks.length, prevTaskLength]);
+
     return (
         <div className="todoapp stack-large">
             <h1>TodoMatic</h1>  
